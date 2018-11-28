@@ -6,9 +6,123 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Helvetica Neue",
     monospace;
+}
+
+/* NAV BAR */
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  background-color: #F1D8F7;
+}
+
+.navBar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transition: 0.2s ease-out;
+  transition: .3s ease-in;
+}
+
+.navBar ul a {
+  color: black;
+  font-size: 16px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin-right: 65px;
+  line-height: 10px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.navBar:hover ul a {
+    color: white;
+    text-decoration: none;
+  }
+
+/* PAGE SCROLLING  */
+.title {
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.links .link {
+    margin-top: 20px;
+}
+
+.component {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.component.first-component {
+    background-color: gray;
+    position: relative;
+}
+
+.first-component--inside-scroller {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+}
+
+.component.second-component {
+    background-color: red;
+}
+
+.component.third-component {
+    background-color: blue;
+}
+
+.component.fourth-component {
+    background-color: yellow;
+}
+
+.component.fifth-component {
+    background-color: purple;
+}
+
+h2 {
+    margin: auto;
+    text-align: center;
+}
+
+.pagination-additional-class {
+    margin: 0;
+    position: fixed;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-additional-class > li:not(:last-of-type) > a, .pagination-additional-class > li:not(:last-of-type) > span {
+    margin-right: 50px;
+}
+
+.demo-page-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.demo-page-contain__hint {
+    margin-bottom: 20px;
 }

@@ -1,49 +1,27 @@
 import React, {Component} from 'react';
 import {PieChart} from 'react-easy-chart';
+import Nav from '../Nav';
+import ReactPageScroller from "react-page-scroller";
+import CategoryPage from '../CategoryPage';
+import Celebrity from '../Celebrity';
+import Movies from '../Movies';
+import Shows from '../Shows';
+import Music from '../Music';
+import {Pager} from "react-bootstrap";
 
 class LandingPage extends Component {
-    constructor() {
-      super();
-      this.state = {
-        valueA: 0,
-        valueB: 0
-      }
-    }
-    handleClickA = (e, prop) => {
-      e.preventDefault();
-      this.setState((prevState) => ({
-        valueA: prevState.valueA + 1
-      }))
-    }
+  constructor() {
+    super();
+  }
 
-    handleClickB = (e, prop) => {
-      e.preventDefault();
-      this.setState((prevState) => ({
-        valueB: prevState.valueB + 1
-      }))
-    }
+  render() {
 
-
-    render() {
-      return(
-        <div>
-        <PieChart
-        labels data = {[
-          { key: 'A', value: this.state.valueA },
-          { key: 'B', value: this.state.valueB },
-        ]}
-        styles= {{
-          '.chart_text': {
-            fontSize: '1em',
-            fill: '#fff'
-          }
-        }}
-        />
-        <button onClick={this.handleClickA} > Jimmy Fallon </button>
-        <button onClick={this.handleClickB}> Jimmy Kimmel </button>
-        </div>
-      )
-    }
+    return(
+      <div>
+      <h1> Welcome!</h1>
+      </div>
+    )
+  }
 }
 
 export default LandingPage;

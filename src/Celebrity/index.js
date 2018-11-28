@@ -27,6 +27,7 @@ class Celebrity extends Component {
     render() {
       return(
         <div>
+        <h1> Who is your favorite Talk Show Host? </h1>
         <PieChart
         labels data = {[
           { key: 'A', value: this.state.valueA },
