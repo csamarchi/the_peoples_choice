@@ -49,7 +49,7 @@ getPagesNumbers = () => {
     return(
       <div>
       <Nav />
-      <ReactPageScroller ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
+      <ReactPageScroller className="navBar" ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
       <LandingPage />
       <CategoryPage />
       <Celebrity />

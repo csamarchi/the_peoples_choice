@@ -9,6 +9,7 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  align-items: center;
 }
 
 code {
@@ -22,6 +23,7 @@ code {
   display: flex;
   justify-content: center;
   background-color: #F1D8F7;
+  height: 70px;
 }
 
 .navBar ul {
@@ -97,9 +99,9 @@ code {
     background-color: purple;
 }
 
-h2 {
-    margin: auto;
+h2, h1 {
     text-align: center;
+    padding: 5px;
 }
 
 .pagination-additional-class {
@@ -125,4 +127,10 @@ h2 {
 
 .demo-page-contain__hint {
     margin-bottom: 20px;
+}
+
+/* PIE CHART */
+
+button {
+  margin: 10px;
 }
