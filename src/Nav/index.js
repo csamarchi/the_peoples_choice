@@ -11,7 +11,7 @@ class Nav extends Component {
     return(
       <nav className = "navBar">
         <ul>
-  
+
         </ul>
       </nav>
     )

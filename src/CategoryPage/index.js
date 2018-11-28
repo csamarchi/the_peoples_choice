@@ -9,7 +9,7 @@ class CategoryPage extends Component {
   render() {
     return(
       <div>
-      <h1> Pick a Category!</h1>
+      <h1 className='headers'> Pick a Category!</h1>
       </div>
     )
   }

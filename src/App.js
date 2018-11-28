@@ -30,7 +30,7 @@ pageOnChange = (number) => {
 
 getPagesNumbers = () => {
 
-    const pageNumbers = [];
+    const pageNumbers = [''];
 
     for (let i = 1; i <= 6; i++) {
         pageNumbers.push(
@@ -67,13 +67,3 @@ getPagesNumbers = () => {
 }
 
 export default App;
-
-//
-// <Switch>
-//   <Route exact path="/" component={ LandingPage } />
-//   <Route exact path="/category" component={ CategoryPage } />
-//   <Route exact path="/celebrity" component={ Celebrity } />
-//   <Route exact path="/movies" component={ Movies } />
-//   <Route exact path="/shows" component={ Shows } />
-//   <Route exact path="/music" component={ Music } />
-// </Switch>

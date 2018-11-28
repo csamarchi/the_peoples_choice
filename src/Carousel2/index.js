@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import Carousel from 'nuka-carousel';
 import {PieChart} from 'react-easy-chart';
-import Pie from '../PieChart';
-import Pie2 from '../PieChart2';
+import Bar from '../BarChart';
 
-class CarouselPage extends Component {
+
+class CarouselPage2 extends Component {
   constructor() {
     super();
   }
@@ -16,16 +16,12 @@ class CarouselPage extends Component {
           <div>
             <Carousel>
               <div>
-                <Pie />
-              </div>
-              <div>
-                <Pie2 />
+                <Bar />
               </div>
             </Carousel>
-
             </div>
           );
         }
       }
 
-export default CarouselPage;
+export default CarouselPage2;
