@@ -12,6 +12,7 @@
     "react": "^16.6.3",
     "react-bootstrap": "^0.32.4",
     "react-chart.js": "^1.0.0",
+    "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.6.3",
     "react-easy-chart": "^1.0.0",
     "react-page-scroller": "^1.4.2",

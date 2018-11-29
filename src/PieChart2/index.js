@@ -15,14 +15,14 @@ class Pie2 extends Component {
   handleClickC = (e, prop) => {
     e.preventDefault();
     this.setState((prevState) => ({
-      valueA: prevState.valueC + 1
+      valueC: prevState.valueC + 1
     }))
   }
 
-  handleClickB = (e, prop) => {
+  handleClickD = (e, prop) => {
     e.preventDefault();
     this.setState((prevState) => ({
-      valueB: prevState.valueD + 1
+      valueD: prevState.valueD + 1
     }))
   }
 
@@ -33,8 +33,8 @@ class Pie2 extends Component {
             <h1> Kardashian? </h1>
                   <PieChart
                   labels data = {[
-                    { key: 'A', value: this.state.valueC },
-                    { key: 'B', value: this.state.valueD },
+                    { value: this.state.valueC },
+                    { value: this.state.valueD },
                   ]}
                   styles= {{
                     '.chart_text': {
@@ -44,8 +44,8 @@ class Pie2 extends Component {
                   }}
                   />
 
-                  <button onClick={this.handleClickC} > Kendall </button>
-                  <button onClick={this.handleClickD}> Kylie </button>
+                  <button onClick={this.handleClickC} > {this.props.name1} </button>
+                  <button onClick={this.handleClickD}> {this.props.name2} </button>
 
             </div>
           );

@@ -16,10 +16,10 @@ class CarouselPage extends Component {
           <div>
             <Carousel>
               <div>
-                <Pie />
+              <Pie name1={'Jimmy Kimmel'} name2={'Jimmy Fallon'}/>
               </div>
               <div>
-                <Pie2 />
+              <Pie2 name1={'Kendall'} name2={'Kylie'} />
               </div>
             </Carousel>
 
