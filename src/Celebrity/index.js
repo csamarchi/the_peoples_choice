@@ -18,6 +18,7 @@ class Celebrity extends Component {
     render() {
       return(
         <div align="center">
+        <Nav />
         <Carousel />
         </div>
       )

@@ -45,7 +45,7 @@ code {
   vertical-align: middle;
 }
 
-.navBar:hover ul a {
+.navBar a:hover {
     color: white;
     text-decoration: none;
   }
@@ -142,6 +142,7 @@ button {
   padding: 10px;
   font-family: "Verdana";
   border-radius: 10px;
+  z-index: 2;
 }
 
 button:hover {
@@ -149,3 +150,69 @@ button:hover {
   background-color: #F1D8F7;
   cursor: pointer;
 }
+
+/* CATEGORY PAGE */
+
+.categories {
+  margin-left: 110px;
+}
+
+.circle a, .circle2 a, .circle3 a, .circle4 a {
+  position: relative;
+  top: 115px;
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 10px;
+}
+
+.circle {
+ text-align: center;
+ margin: 10px;
+ height: 250px;
+ width: 250px;
+ background-color: #4d94ff;
+ border-radius: 100px;
+ display: inline-block;
+}
+
+.circle2 {
+ text-align: center;
+ margin: 10px;
+ height: 250px;
+ width: 250px;
+ background-color: #4d94ff;
+ border-radius: 100px;
+ display: inline-block;
+}
+
+.circle3 {
+ text-align: center;
+ margin: 10px;
+ height: 250px;
+ width: 250px;
+ background-color: #4d94ff;
+ border-radius: 100px;
+ display: inline-block;
+}
+
+.circle4 {
+ text-align: center;
+ margin: 10px;
+ height: 250px;
+ width: 250px;
+ background-color: #4d94ff;
+ border-radius: 100px;
+ display: inline-block;
+}
+
+.circle:hover, .circle2:hover, .circle3:hover, .circle4:hover {
+ background-color: #4d94ff;
+ opacity: 0.7;
+}
+
+.circle a:hover, .circle2 a:hover, .circle3 a:hover, .circle4 a:hover {
+  color: white;
+}
+/* CAROUSEL  */

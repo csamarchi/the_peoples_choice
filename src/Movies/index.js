@@ -13,6 +13,7 @@ class Movies extends Component {
   render() {
     return(
       <div align="center">
+  
       </div>
     )
   }

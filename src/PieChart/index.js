@@ -32,7 +32,6 @@ class Pie extends Component {
           <div>
             <h1> Favorite Talk Show Host? </h1>
                   <PieChart
-
                   size={350}
                   labels data = {[
                     { value: this.state.valueA },
@@ -45,7 +44,6 @@ class Pie extends Component {
                     }
                   }}
                   />
-
                   <button onClick={this.handleClickA}>{this.props.name1}</button>
                   <button onClick={this.handleClickB}>{this.props.name2}</button>
 

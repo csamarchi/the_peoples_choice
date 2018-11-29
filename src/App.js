@@ -16,52 +16,24 @@ import Nav from './Nav';
 class App extends Component {
   constructor() {
     super();
-    this.state = {currentPage: 1};
-    this._pageScroller = null;
+
   }
-
-  goToPage = (eventKey) => {
-    this._pageScroller.goToPage(eventKey);
-};
-
-pageOnChange = (number) => {
-    this.setState({currentPage: number});
-};
-
-getPagesNumbers = () => {
-
-    const pageNumbers = [''];
-
-    for (let i = 1; i <= 6; i++) {
-        pageNumbers.push(
-            <Pager.Item key={i} eventKey={i - 1} onSelect={this.goToPage}>{i}</Pager.Item>
-        )
-    }
-
-    return [...pageNumbers];
-};
 
 
   render() {
 
-    const pagesNumbers = this.getPagesNumbers();
 
     return(
       <div>
-      <Nav />
-      <ReactPageScroller className="navBar" ref={c => this._pageScroller = c} pageOnChange={this.pageOnChange}>
-      <LandingPage />
-      <CategoryPage />
-      <Celebrity />
-      <Movies />
-      <Shows />
-      <Music />
-      </ReactPageScroller>
-      <Pager className="pagination-additional-class" bsSize="large">
-          {pagesNumbers}
-      </Pager>
-      <h1> Welcome!</h1>
-      </div>
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/category" component={CategoryPage} />
+            <Route exact path="/celebrity" component={Celebrity} />
+            <Route exact path="/movies" component={Movies} />
+            <Route exact path="/shows" component={Shows} />
+            <Route exact path="/music" component={Music} />
+          </Switch>
+          </div>
     )
   }
 }

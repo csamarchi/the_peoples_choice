@@ -32,6 +32,7 @@ class Pie2 extends Component {
           <div>
             <h1> Kardashian? </h1>
                   <PieChart
+                  size={349}
                   labels data = {[
                     { value: this.state.valueC },
                     { value: this.state.valueD },
