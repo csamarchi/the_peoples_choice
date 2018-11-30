@@ -30,10 +30,3 @@
     transform: rotate(360deg);
   }
 }
-
-.navBar {
-  display: flex;
-  justify-content: center;
-  background-color: #F1D8F7;
-  height: 50px;
-}

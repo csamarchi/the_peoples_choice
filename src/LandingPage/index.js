@@ -20,7 +20,8 @@ class LandingPage extends Component {
       <div>
       <Nav />
       <h1 className='headers' > Welcome!</h1>
-
+        <container className='welcome'>
+        </container>
       </div>
     )
   }

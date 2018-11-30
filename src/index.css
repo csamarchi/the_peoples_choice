@@ -16,6 +16,8 @@ code {
     monospace;
 }
 
+/* CREATE POST */
+
  .wrapperForm {
   display: flex;
   justify-content: center;
@@ -23,6 +25,10 @@ code {
   padding: 50px;
 }
 
+input {
+  padding: 5px;
+  margin-left: 10px;
+}
 
 
 /* NAV BAR */
@@ -30,8 +36,9 @@ code {
 .navBar {
   display: flex;
   justify-content: center;
-  background-color: #F1D8F7;
-  height: 70px;
+  background-color: #dc9ee5;
+  opacity: 0.9;
+  height: 50px;
 }
 
 .navBar ul {
@@ -44,23 +51,33 @@ code {
 }
 
 .navBar ul a {
-  color: black;
-  font-size: 16px;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: white;
+  font-size: 20px;
+  font-family: "Helvetica",Helvetica,Arial,sans-serif;
   margin-right: 30px;
+  position: relative;
+  left: -410px;
   float: left;
-  line-height: 10px;
+  line-height: 15px;
   text-decoration: none;
   vertical-align: middle;
 }
 
 .navBar a:hover {
-    color: white;
+    color: black;
     text-decoration: none;
   }
 
+.cheers {
+  height: 37px;
+  width: 37px;
+  position: relative;
+  left: -440px;
+  top: -12px;
+}
+
 /* PAGE SCROLLING  */
-.title {
+/* .title {
     margin: 20px auto 0;
     text-align: center;
 }
@@ -106,7 +123,7 @@ code {
 
 .component.fifth-component {
     background-color: purple;
-}
+} */
 
 /* HEADERS */
 .headers, h1 {
@@ -117,31 +134,6 @@ code {
 
 .headers {
   font-size: 90px;
-}
-
-.pagination-additional-class {
-    margin: 0;
-    position: fixed;
-    top: 20px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.pagination-additional-class > li:not(:last-of-type) > a, .pagination-additional-class > li:not(:last-of-type) > span {
-    margin-right: 50px;
-}
-
-.demo-page-contain {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-}
-
-.demo-page-contain__hint {
-    margin-bottom: 20px;
 }
 
 /* PIE CHART */
@@ -181,8 +173,8 @@ button:hover {
  margin: 10px;
  height: 250px;
  width: 250px;
- background-color: #4d94ff;
- border-radius: 100px;
+ background-color: #4b4c4f;
+ border-radius: 50%;
  display: inline-block;
 }
 
@@ -191,8 +183,8 @@ button:hover {
  margin: 10px;
  height: 250px;
  width: 250px;
- background-color: #4d94ff;
- border-radius: 100px;
+ background-color: #707275;
+ border-radius: 50%;
  display: inline-block;
 }
 
@@ -201,8 +193,8 @@ button:hover {
  margin: 10px;
  height: 250px;
  width: 250px;
- background-color: #4d94ff;
- border-radius: 100px;
+ background-color: #9fa1a5;
+ border-radius: 50%;
  display: inline-block;
 }
 
@@ -211,8 +203,8 @@ button:hover {
  margin: 10px;
  height: 250px;
  width: 250px;
- background-color: #4d94ff;
- border-radius: 100px;
+ background-color: #c8cbd1;
+ border-radius: 50%;
  display: inline-block;
 }
 

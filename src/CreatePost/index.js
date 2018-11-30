@@ -54,7 +54,7 @@ class CreatePost extends Component {
                 Choice 2
                 <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
               </label> <br/><br/>
-                <button type='submit'>Submit</button>
+                <button className='createButton' type='submit'>Submit</button>
             </form>
         </div>
       </div>
