@@ -6,33 +6,55 @@ class CreatePost extends Component {
   constructor() {
     super();
     this.state = {
-      question: '',
+      question: 'MIRZA',
       choice1: '',
       choice2: '',
     }
   }
+  handleChange = (e) => {
+    this.setState({[e.currentTarget.name]: e.currentTarget.value})
+  }
+  handleCreatePost = async (e) => {
+    e.preventDefault();
+    console.log(this.state, 'worked');
+
+    try {
+      const addedPie = await fetch('http://localhost:9000/pie', {
+        method: 'POST',
+        credentials: 'include',
+        body: JSON.stringify(this.state),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log(addedPie)
+
+    } catch (err) {
+      console.log(err);
+      console.log('error');
+    }
+  }
 
   render() {
-
-
     return(
       <div>
         <Nav />
         <h1 className='createText'> Creat your own post </h1>
           <div className='wrapperForm'>
-            <form>
+            <form onSubmit={this.handleCreatePost} >
               <label>
                 Question
-                <input type='text' question='question' />
+                <input type='text' name='question' onChange={this.handleChange} value={this.state.value} />
               </label> <br/><br/>
               <label>
                 Choice 1
-                <input type='text' choice1='choice1' />
+                <input type='text' name='choice1' onChange={this.handleChange} value={this.state.value} />
               </label> <br/><br/>
               <label>
                 Choice 2
-                <input type='text' choice2='choice2' />
-              </label>
+                <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
+              </label> <br/><br/>
+                <button type='submit'>Submit</button>
             </form>
         </div>
       </div>
