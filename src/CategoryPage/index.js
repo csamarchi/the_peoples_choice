@@ -15,7 +15,7 @@ class CategoryPage extends Component {
     return(
       <div>
       <Nav />
-      <h1 className='headers'> Pick a Category!</h1>
+      <h1 className='headers'> Choose a Category</h1>
         <div className='categories'>
           <div className="circle">
           <Link to ='/celebrity'> Celebrities </Link>

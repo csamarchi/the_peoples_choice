@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {PieChart} from 'react-easy-chart';
+import Nav from '../Nav';
 
 class Shows extends Component {
   constructor() {
@@ -9,6 +10,7 @@ class Shows extends Component {
   render() {
     return(
       <div>
+        <Nav />
       <h1> Shows! </h1>
       </div>
     )

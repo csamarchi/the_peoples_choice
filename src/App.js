@@ -10,7 +10,7 @@ import Movies from './Movies';
 import Shows from './Shows';
 import Music from './Music';
 import Nav from './Nav';
-
+import CreatePost from './CreatePost';
 
 
 class App extends Component {
@@ -32,6 +32,7 @@ class App extends Component {
             <Route exact path="/movies" component={Movies} />
             <Route exact path="/shows" component={Shows} />
             <Route exact path="/music" component={Music} />
+            <Route exact path="/create" component={CreatePost} />
           </Switch>
           </div>
     )

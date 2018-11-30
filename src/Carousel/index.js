@@ -14,14 +14,14 @@ class CarouselPage extends Component {
 
           return (
           <div >
-            <Carousel>
-              <div>
-              <Pie name1={'Jimmy Kimmel'} name2={'Jimmy Fallon'} />
-              </div>
-              <div>
-              <Pie2 name1={'Kendall'} name2={'Kylie'} />
-              </div>
-            </Carousel>
+          <Carousel>
+            <div>
+            <Pie name1={'Jimmy Kimmel'} name2={'Jimmy Fallon'} />
+            </div>
+            <div>
+            <Pie2 name1={'Kendall'} name2={'Kylie'} />
+            </div>
+          </Carousel>
           </div>
           );
         }

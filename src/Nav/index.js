@@ -17,7 +17,7 @@ class Nav extends Component {
         <ul>
         <li><Link to='/category'>Vote</Link></li>
         <li><Link to =''>Top Trending</Link></li>
-        <li><Link to =''>Create a Post</Link></li>
+        <li><Link to ='/create'>Create a Post</Link></li>
         </ul>
       </nav>
     )

@@ -16,6 +16,15 @@ code {
     monospace;
 }
 
+ .wrapperForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+
+
 /* NAV BAR */
 
 .navBar {

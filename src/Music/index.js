@@ -10,6 +10,7 @@ class Music extends Component {
   render() {
     return(
       <div>
+        <Nav />
       <h1> Music! </h1>
       </div>
     )

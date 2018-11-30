@@ -13,7 +13,8 @@ class Movies extends Component {
   render() {
     return(
       <div align="center">
-  
+        <Nav />
+        <Carousel2 />
       </div>
     )
   }
