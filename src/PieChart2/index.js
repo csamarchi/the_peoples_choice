@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Carousel from 'nuka-carousel';
-import {PieChart} from 'react-easy-chart';
+import PieChart from 'react-minimal-pie-chart';
 
 
 class Pie2 extends Component {
@@ -31,19 +31,13 @@ class Pie2 extends Component {
           return (
           <div>
             <h1> Kardashian? </h1>
-                  <PieChart
-                  size={349}
-                  labels data = {[
-                    { value: this.state.valueC },
-                    { value: this.state.valueD },
-                  ]}
-                  styles= {{
-                    '.chart_text': {
-                      fontSize: '1em',
-                      fill: '#fff'
-                    }
-                  }}
-                  />
+            <PieChart
+              data={[
+                { title: 'One', value: this.state.valueA, color: '#E38627' },
+                { title: 'Two', value: this.state.valueB, color: '#C13C37' },
+              ]}
+              style={{height: '300px'}}
+            />;
 
                   <button onClick={this.handleClickC} > {this.props.name1} </button>
                   <button onClick={this.handleClickD}> {this.props.name2} </button>
