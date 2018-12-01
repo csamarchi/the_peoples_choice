@@ -6,9 +6,10 @@ class CreatePost extends Component {
   constructor() {
     super();
     this.state = {
-      question: 'MIRZA',
+      question: '',
       choice1: '',
       choice2: '',
+      category: '',
     }
   }
   handleChange = (e) => {
@@ -57,10 +58,10 @@ class CreatePost extends Component {
               <label>
                 Category
                 <br/><br/>
-                <input type='radio' name='category' onChange={this.handleChange} value={this.state.value} /> Celebrity
-                <input type='radio' name='category' onChange={this.handleChange} value={this.state.value} /> Movies
-                <input type='radio' name='category' onChange={this.handleChange} value={this.state.value} /> Shows
-                <input type='radio' name='category' onChange={this.handleChange} value={this.state.value} /> Music
+                <input type='radio' name='category' onChange={this.handleChange} value='Celebrity' /> Celebrity
+                <input type='radio' name='category' onChange={this.handleChange} value='Movies' /> Movies
+                <input type='radio' name='category' onChange={this.handleChange} value='Shows'/> Shows
+                <input type='radio' name='category' onChange={this.handleChange} value='Music' /> Music
               </label> <br/><br/>
                 <button className='createButton' type='submit'>Submit</button>
             </form>

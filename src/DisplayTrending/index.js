@@ -11,6 +11,7 @@ const DisplayTrending = (props) => {
           <h3>{item.question}</h3>
           <h3>{item.choice1}</h3>
           <h3>{item.choice2}</h3>
+          <h3>{item.category}</h3>
           </div>
         )
       })
