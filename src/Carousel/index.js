@@ -28,18 +28,20 @@ class CarouselPage extends Component {
     })
   }
 
-  render() {
 
+
+  render() {
+    const displayPolls = this.state.polls.map((item) => {
+          return (
+            <div>
+            <Pie question={item.question} name1={item.choice1} name2={item.choice2}/>
+            </div>
+          )
+        })
           return (
           <div >
           <Carousel className='carousel'>
-            <div>
-              <Pie question={'Best talk show host?'} name1={'Jimmy Kimmel'} name2={'Jimmy Fallon'} key='first'/>
-            </div>
-            <div>
-              <Pie question={'Kardashian'} name1={'Kendall'} name2={'Kylie'} key='second'/>
-            </div>
-
+          {displayPolls}
           </Carousel>
           </div>
           );
