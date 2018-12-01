@@ -1,6 +1,5 @@
 import {BarChart} from 'react-easy-chart';
 import React, {Component} from 'react';
-import {PieChart} from 'react-easy-chart';
 import Nav from '../Nav';
 import Bar from '../BarChart';
 import Carousel2 from '../Carousel2';

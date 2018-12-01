@@ -30,7 +30,7 @@ class Pie extends Component {
 
           return (
           <div>
-            <h1> Favorite Talk Show Host? </h1>
+            <h1> {this.props.question} </h1>
             <PieChart
               data={[
                 { title: 'One', value: this.state.valueA, color: '#E38627' },

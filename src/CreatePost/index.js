@@ -54,6 +54,14 @@ class CreatePost extends Component {
                 Choice 2
                 <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
               </label> <br/><br/>
+              <label>
+                Category
+                <br/><br/>
+                <input type='radio' name='category' onChange={this.handleChange} value={this.state.value} /> Celebrity
+                <input type='radio' name='category' onChange={this.handleChange} value={this.state.value} /> Movies
+                <input type='radio' name='category' onChange={this.handleChange} value={this.state.value} /> Shows
+                <input type='radio' name='category' onChange={this.handleChange} value={this.state.value} /> Music
+              </label> <br/><br/>
                 <button className='createButton' type='submit'>Submit</button>
             </form>
         </div>

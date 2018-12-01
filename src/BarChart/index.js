@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Carousel from 'nuka-carousel';
 import {PieChart} from 'react-easy-chart';
+import BarChart from 'react-bar-chart';
 
 class Bar extends Component {
   constructor() {
@@ -9,9 +10,6 @@ class Bar extends Component {
       valueA: 0,
       valueB: 0,
       valueC: 0,
-      valueD: 0,
-      valueE: 0,
-
     }
   }
 
@@ -35,40 +33,25 @@ class Bar extends Component {
     }))
   }
 
-  handleClickD = (e, prop) => {
-    e.preventDefault();
-    this.setState((prevState) => ({
-      valueD: prevState.valueD + 1
-    }))
-  }
-
-  handleClickE = (e, prop) => {
-    e.preventDefault();
-    this.setState((prevState) => ({
-      valueE: prevState.valueE + 1
-    }))
-  }
 
   render() {
 
           return (
           <div>
-            <h1> Best Rom Com? </h1>
-              <PieChart
-                size={350}
-                labels data={[
-                 {key: 'A', value: this.state.valueA},
-                 {key: 'B', value: this.state.valueB},
-                 {key: 'C', value: this.state.valueC},
-                 {key: 'D', value: this.state.valueD},
-                 {key: 'E', value: this.state.valueE},
-                ]}
-                />
-                  <button onClick={this.handleClickA} > 50 First Dates </button>
-                  <button onClick={this.handleClickB}> Forgetting Sarah Marshall </button>
-                  <button onClick={this.handleClickC}> What Happens in Vegas </button>
-                  <button onClick={this.handleClickD}> Crazy Stupid Love </button>
-                  <button onClick={this.handleClickE}> Friends with Benefits </button>
+            <h1> {this.props.question} </h1>
+            <BarChart ylabel='Quantity'
+                              width={600}
+                              height={400}
+                              margin={{top: 20, right: 20, bottom: 30, left: 40}}
+                              data={[
+              {text: this.props.name1, value: this.state.valueA},
+              {text: this.props.name2, value: this.state.valueB},
+              {text: this.props.name3, value: this.state.valueC}
+            ]}/>
+
+                  <button onClick={this.handleClickA} > {this.props.name1}</button>
+                  <button onClick={this.handleClickB}> {this.props.name2} </button>
+                  <button onClick={this.handleClickC}> {this.props.name3} </button>
 
             </div>
           );
