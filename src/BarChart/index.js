@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Carousel from 'nuka-carousel';
-import {PieChart} from 'react-easy-chart';
 import BarChart from 'react-bar-chart';
 
 class Bar extends Component {
@@ -42,6 +41,7 @@ class Bar extends Component {
             <BarChart ylabel='Quantity'
                               width={600}
                               height={400}
+                              
                               margin={{top: 20, right: 20, bottom: 30, left: 40}}
                               data={[
               {text: this.props.name1, value: this.state.valueA},

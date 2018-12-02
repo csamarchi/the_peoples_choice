@@ -12,6 +12,7 @@ class Shows extends Component {
       <div>
         <Nav />
       <h1> Shows! </h1>
+      
       </div>
     )
   }

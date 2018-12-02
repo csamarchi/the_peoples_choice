@@ -9,7 +9,11 @@ class CreatePost extends Component {
       question: '',
       choice1: '',
       choice2: '',
+      choice3: '',
       category: '',
+      pieChart: false,
+      barChart: false,
+      buttons: true
     }
   }
   handleChange = (e) => {
@@ -35,37 +39,97 @@ class CreatePost extends Component {
       console.log('error');
     }
   }
+  handleClickPie = (e) => {
+    console.log(this.state.pieChart)
+    e.preventDefault();
+    this.setState({
+      pieChart: true,
+      buttons: false
+    })
+  }
+  handleClickBar = (e) => {
+    e.preventDefault();
+    this.setState({
+      barChart: true,
+      buttons: false
+    })
+  }
 
   render() {
+    const pieChart = () => {
+      return (
+        <form onSubmit={this.handleCreatePost} >
+          <label>
+            Question
+            <input type='text' name='question' onChange={this.handleChange} value={this.state.value} />
+          </label> <br/><br/>
+          <label>
+            Choice 1
+            <input type='text' name='choice1' onChange={this.handleChange} value={this.state.value} />
+          </label> <br/><br/>
+          <label>
+            Choice 2
+            <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
+          </label> <br/><br/>
+          <label>
+            Choice 3
+            <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
+          </label> <br/><br/>
+          <label>
+            Choice 4
+            <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
+          </label> <br/><br/>
+          <label>
+            Category
+            <br/><br/>
+            <input type='radio' name='category' onChange={this.handleChange} value='Celebrity' /> Celebrity
+            <input type='radio' name='category' onChange={this.handleChange} value='Movies' /> Movies
+            <input type='radio' name='category' onChange={this.handleChange} value='Shows'/> Shows
+            <input type='radio' name='category' onChange={this.handleChange} value='Music' /> Music
+          </label> <br/><br/>
+            <button className='createButton' type='submit'>Submit</button>
+        </form>
+      )
+    }
+
+    const barChart = () => {
+      return (
+        <form onSubmit={this.handleCreatePost} >
+          <label>
+            Question
+            <input type='text' name='question' onChange={this.handleChange} value={this.state.value} />
+          </label> <br/><br/>
+          <label>
+            Choice 1
+            <input type='text' name='choice1' onChange={this.handleChange} value={this.state.value} />
+          </label> <br/><br/>
+          <label>
+            Choice 2
+            <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
+          </label> <br/><br/>
+          <label>
+            Category
+            <br/><br/>
+            <input type='radio' name='category' onChange={this.handleChange} value='Celebrity' /> Celebrity
+            <input type='radio' name='category' onChange={this.handleChange} value='Movies' /> Movies
+            <input type='radio' name='category' onChange={this.handleChange} value='Shows'/> Shows
+            <input type='radio' name='category' onChange={this.handleChange} value='Music' /> Music
+          </label> <br/><br/>
+            <button className='createButton' type='submit'>Submit</button>
+        </form>
+      )
+    }
+
     return(
       <div>
         <Nav />
-        <h1 className='createText'> Creat your own post </h1>
-          <div className='wrapperForm'>
-            <form onSubmit={this.handleCreatePost} >
-              <label>
-                Question
-                <input type='text' name='question' onChange={this.handleChange} value={this.state.value} />
-              </label> <br/><br/>
-              <label>
-                Choice 1
-                <input type='text' name='choice1' onChange={this.handleChange} value={this.state.value} />
-              </label> <br/><br/>
-              <label>
-                Choice 2
-                <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
-              </label> <br/><br/>
-              <label>
-                Category
-                <br/><br/>
-                <input type='radio' name='category' onChange={this.handleChange} value='Celebrity' /> Celebrity
-                <input type='radio' name='category' onChange={this.handleChange} value='Movies' /> Movies
-                <input type='radio' name='category' onChange={this.handleChange} value='Shows'/> Shows
-                <input type='radio' name='category' onChange={this.handleChange} value='Music' /> Music
-              </label> <br/><br/>
-                <button className='createButton' type='submit'>Submit</button>
-            </form>
-        </div>
+          <h1 className='createText'> Creat your own post </h1>
+            <div className='wrapperForm'>
+              {this.state.buttons ? <button onClick={this.handleClickBar}>Bar chart</button> : null}
+              {this.state.barChart ? barChart() : null}
+              {this.state.buttons ? <button onClick={this.handleClickPie}>Pie chart</button> : null}
+              {this.state.pieChart ? pieChart() : null}
+            </div>
       </div>
     )
   }

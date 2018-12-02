@@ -6,22 +6,45 @@ import Bar from '../BarChart';
 class CarouselPage2 extends Component {
   constructor() {
     super();
+    this.state = {
+      polls: []
+    }
   }
 
+  getChart = async () => {
+    console.log('FIFTH')
+    const polls = await fetch('http://localhost:9000/pie');
+    const pollsParsedJSON = await polls.json();
+
+      return pollsParsedJSON
+  }
+
+  componentDidMount() {
+    console.log('FOURTH')
+    this.getChart().then((polls) => {
+      this.setState({polls: polls.data})
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
 
   render() {
+    const displayPolls = this.state.polls.map((item) => {
+          return (
+            <div>
+            <Bar question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3}/>
+            </div>
+          )
+        })
 
           return (
           <div>
-            <Carousel>
-            <div>
-                <Bar question={'Favorite Rom Com?'} name1={'Forgetting Sarah Marshell'} name2={'Crazy Stupid Love'} name3={'50 First Dates'}key='first'/>
+            <div >
+              <Carousel className='carousel'>
+                {displayPolls}
+              </Carousel>
             </div>
-            <div>
-                <Bar question={'Best out of three'} name1={'Mean Girls'} name2={'13 Going on 30'} name3={'Bring it On'}key='first'/>
-            </div>
-            </Carousel>
-            </div>
+          </div>
           );
         }
       }
