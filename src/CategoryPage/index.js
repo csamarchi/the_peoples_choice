@@ -11,6 +11,8 @@ class CategoryPage extends Component {
     super();
   }
 
+
+
   render() {
     return(
       <div>

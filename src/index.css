@@ -207,6 +207,7 @@ button:hover {
  border-radius: 50%;
  display: inline-block;
 }
+/* transition: all 0.3s ease-in-out; */
 
 .circle:hover, .circle2:hover, .circle3:hover, .circle4:hover {
  background-color: #4d94ff;
@@ -218,8 +219,14 @@ button:hover {
 }
 /* CAROUSEL  */
 
-
+/* BAR CHART */
 
 .bar {
   fill: steelblue;
+}
+
+/* TOP TRENDING */
+
+.gridContainer {
+  display: inline-grid;
 }

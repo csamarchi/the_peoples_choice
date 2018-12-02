@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Pie from '../PieChart';
 import Carousel from 'nuka-carousel';
 import {PieChart} from 'react-easy-chart';
+import Bar from '../BarChart';
+
 
 class CarouselPage extends Component {
   constructor() {
@@ -29,12 +31,12 @@ class CarouselPage extends Component {
   }
 
 
-
   render() {
     const displayPolls = this.state.polls.map((item) => {
+      console.log(item);
           return (
             <div>
-            <Pie question={item.question} name1={item.choice1} name2={item.choice2}/>
+            {item.chartType == 'pie' ? <Pie question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3} name4={item.choice4}/> : <Bar question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3}/>}
             </div>
           )
         })

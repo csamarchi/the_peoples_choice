@@ -48,8 +48,8 @@ class Pie extends Component {
               data={[
                 { title: 'One', value: this.state.valueA, color: '#E38627' },
                 { title: 'Two', value: this.state.valueB, color: '#C13C37' },
-                { title: 'Three', value: this.state.valueC, color: '#C13C37' },
-                { title: 'Four', value: this.state.valueD, color: '#C13C37' },
+                { title: 'Three', value: this.state.valueC, color: '#4286f4' },
+                { title: 'Four', value: this.state.valueD, color: '#cd30e5' },
 
               ]}
               style={{height: '300px'}}

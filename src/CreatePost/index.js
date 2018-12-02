@@ -6,19 +6,23 @@ class CreatePost extends Component {
   constructor() {
     super();
     this.state = {
+      chartType: '',
       question: '',
       choice1: '',
       choice2: '',
       choice3: '',
+      choice4: '',
       category: '',
       pieChart: false,
       barChart: false,
       buttons: true
     }
   }
+
   handleChange = (e) => {
-    this.setState({[e.currentTarget.name]: e.currentTarget.value})
+    this.setState({[e.currentTarget.name]: e.currentTarget.value});
   }
+
   handleCreatePost = async (e) => {
     e.preventDefault();
     console.log(this.state, 'worked');
@@ -39,17 +43,21 @@ class CreatePost extends Component {
       console.log('error');
     }
   }
+
   handleClickPie = (e) => {
     console.log(this.state.pieChart)
     e.preventDefault();
     this.setState({
+      chartType: 'pie',
       pieChart: true,
       buttons: false
     })
   }
+
   handleClickBar = (e) => {
     e.preventDefault();
     this.setState({
+      chartType: 'bar',
       barChart: true,
       buttons: false
     })
@@ -73,11 +81,11 @@ class CreatePost extends Component {
           </label> <br/><br/>
           <label>
             Choice 3
-            <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
+            <input type='text' name='choice3' onChange={this.handleChange} value={this.state.value} />
           </label> <br/><br/>
           <label>
             Choice 4
-            <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
+            <input type='text' name='choice4' onChange={this.handleChange} value={this.state.value} />
           </label> <br/><br/>
           <label>
             Category
@@ -123,7 +131,7 @@ class CreatePost extends Component {
     return(
       <div>
         <Nav />
-          <h1 className='createText'> Creat your own post </h1>
+          <h1 className='createText'> Create your own post </h1>
             <div className='wrapperForm'>
               {this.state.buttons ? <button onClick={this.handleClickBar}>Bar chart</button> : null}
               {this.state.barChart ? barChart() : null}
