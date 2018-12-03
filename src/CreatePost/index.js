@@ -92,7 +92,7 @@ class CreatePost extends Component {
             <br/><br/>
             <input type='radio' name='category' onChange={this.handleChange} value='Celebrity' /> Celebrity
             <input type='radio' name='category' onChange={this.handleChange} value='Movies' /> Movies
-            <input type='radio' name='category' onChange={this.handleChange} value='Shows'/> Shows
+            <input type='radio' name='category' onChange={this.handleChange} value='Sports'/> Sports
             <input type='radio' name='category' onChange={this.handleChange} value='Music' /> Music
           </label> <br/><br/>
             <button className='createButton' type='submit'>Submit</button>
@@ -120,7 +120,7 @@ class CreatePost extends Component {
             <br/><br/>
             <input type='radio' name='category' onChange={this.handleChange} value='Celebrity' /> Celebrity
             <input type='radio' name='category' onChange={this.handleChange} value='Movies' /> Movies
-            <input type='radio' name='category' onChange={this.handleChange} value='Shows'/> Shows
+            <input type='radio' name='category' onChange={this.handleChange} value='Sports'/> Sports
             <input type='radio' name='category' onChange={this.handleChange} value='Music' /> Music
           </label> <br/><br/>
             <button className='createButton' type='submit'>Submit</button>

@@ -4,7 +4,7 @@ import LandingPage from '../LandingPage';
 import CategoryPage from '../CategoryPage';
 import Celebrity from '../Celebrity';
 import Movies from '../Movies';
-import Shows from '../Shows';
+import Sports from '../Sports';
 import Music from '../Music';
 
 class Nav extends Component {

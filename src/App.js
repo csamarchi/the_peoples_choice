@@ -7,7 +7,7 @@ import LandingPage from './LandingPage';
 import CategoryPage from './CategoryPage';
 import Celebrity from './Celebrity';
 import Movies from './Movies';
-import Shows from './Shows';
+import Sports from './Sports';
 import Music from './Music';
 import Nav from './Nav';
 import CreatePost from './CreatePost';
@@ -30,7 +30,7 @@ class App extends Component {
             <Route exact path="/category" component={CategoryPage} />
             <Route exact path="/celebrity" component={Celebrity} />
             <Route exact path="/movies" component={Movies} />
-            <Route exact path="/shows" component={Shows} />
+            <Route exact path="/Sports" component={Sports} />
             <Route exact path="/music" component={Music} />
             <Route exact path="/create" component={CreatePost} />
             <Route exact path="/trending" component={TopTrending} />

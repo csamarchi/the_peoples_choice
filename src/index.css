@@ -155,7 +155,8 @@ button:hover {
 /* CATEGORY PAGE */
 
 .categories {
-  margin-left: 110px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .circle a, .circle2 a, .circle3 a, .circle4 a {
@@ -214,7 +215,9 @@ button:hover {
  opacity: 0.7;
 }
 
-.circle a:hover, .circle2 a:hover, .circle3 a:hover, .circle4 a:hover {
+.categoryButtonText {
+  font-family: "Helvetica";
+  margin-top: 95px;
   color: white;
 }
 /* CAROUSEL  */

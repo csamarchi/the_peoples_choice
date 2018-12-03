@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {PieChart} from 'react-easy-chart';
 import Nav from '../Nav';
 
-class Shows extends Component {
+class Sports extends Component {
   constructor() {
     super();
   }
@@ -11,11 +11,11 @@ class Shows extends Component {
     return(
       <div>
         <Nav />
-      <h1> Shows! </h1>
-      
+      <h1> Sports! </h1>
+
       </div>
     )
   }
 }
 
-export default Shows;
+export default Sports;

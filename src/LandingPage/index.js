@@ -5,7 +5,7 @@ import ReactPageScroller from "react-page-scroller";
 import CategoryPage from '../CategoryPage';
 import Celebrity from '../Celebrity';
 import Movies from '../Movies';
-import Shows from '../Shows';
+import Sports from '../Sports';
 import Music from '../Music';
 import {Pager} from "react-bootstrap";
 
