@@ -52,12 +52,14 @@ class Pie extends Component {
                 { title: 'Four', value: this.state.valueD, color: '#cd30e5' },
 
               ]}
-              style={{height: '300px'}}
+              style={{height: '300px',
+                      left: '100px'
+              }}
             />;
-                  <button onClick={this.handleClickA}>{this.props.name1}</button>
-                  <button onClick={this.handleClickB}>{this.props.name2}</button>
-                  <button onClick={this.handleClickC}>{this.props.name3}</button>
-                  <button onClick={this.handleClickD}>{this.props.name4}</button>
+                  <button className='barButtons' onClick={this.handleClickA}>{this.props.name1}</button>
+                  <button className='barButtons' onClick={this.handleClickB}>{this.props.name2}</button>
+                  <button className='barButtons' onClick={this.handleClickC}>{this.props.name3}</button>
+                  <button className='barButtons' onClick={this.handleClickD}>{this.props.name4}</button>
             </div>
           );
         }

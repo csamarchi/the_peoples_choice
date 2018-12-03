@@ -16,7 +16,7 @@ class LandingPage extends Component {
   render() {
 
     return(
-      <div>
+      <div className='background'>
       <Nav />
       <h1 className='headers' > Welcome!</h1>
         <container className='welcome'>

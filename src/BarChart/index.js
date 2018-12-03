@@ -33,16 +33,16 @@ class Bar extends Component {
           <div>
             <h1> {this.props.question} </h1>
             <BarChart ylabel='Quantity'
-                              width={500}
-                              height={300}
-                              margin={{top: 20, right: 20, bottom: 30, left: 40}}
+                              width={550}
+                              height={350}
+                              margin={{top: 20, right: 20, bottom: 100, left: 150}}
                               data={[
               {text: this.props.name1, value: this.state.valueA},
               {text: this.props.name2, value: this.state.valueB},
             ]}/>
 
-                  <button onClick={this.handleClickA} > {this.props.name1}</button>
-                  <button onClick={this.handleClickB}> {this.props.name2} </button>
+                  <button className='chartButtons' onClick={this.handleClickA} > {this.props.name1}</button>
+                  <button className='chartButtons' onClick={this.handleClickB}> {this.props.name2} </button>
             </div>
           );
         }

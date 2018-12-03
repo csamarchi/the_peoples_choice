@@ -18,10 +18,10 @@ class Nav extends Component {
     return(
       <nav className = "navBar">
         <ul>
-        <img className='cheers' src='cheers.png'/>
-        <Link to='/category'>Vote</Link>
-        <Link to ='/trending'>Top Trending</Link>
-        <Link to ='/create'>Create a Post</Link>
+          <Link to='/'> <img className='cheers' src='cheers.png'/> </Link>
+          <Link to='/category'>Vote</Link>
+          <Link to ='/trending'>Top Trending</Link>
+          <Link to ='/create'>Create a Post</Link>
         </ul>
       </nav>
     )

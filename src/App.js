@@ -34,7 +34,7 @@ class App extends Component {
             <Route exact path="/create" component={CreatePost} />
             <Route exact path="/trending" component={TopTrending} />
           </Switch>
-          </div>
+      </div>
     )
   }
 }

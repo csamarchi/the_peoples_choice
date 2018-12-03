@@ -81,9 +81,20 @@ code {
 
 /* PIE CHART */
 
+.chartButtons {
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  bottom: 100px;
+  font-family: "Verdana";
+  border-radius: 10px;
+  z-index: 2;
+}
+
 button {
   margin: 10px;
   padding: 10px;
+  position: relative;
   font-family: "Verdana";
   border-radius: 10px;
   z-index: 2;
@@ -95,7 +106,21 @@ button:hover {
   cursor: pointer;
 }
 
+.barButtons {
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  font-family: "Verdana";
+  border-radius: 10px;
+  z-index: 2;
+}
+
 
 /* CAROUSEL  */
 
 /* BAR CHART */
+
+.bar {
+  margin-left: 10px;
+  fill: steelblue;
+}
