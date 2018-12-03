@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Pie from '../PieChart';
 import Carousel from 'nuka-carousel';
 import {PieChart} from 'react-easy-chart';
+import Pie from '../PieChart';
 import Bar from '../BarChart';
 
 
@@ -32,18 +32,28 @@ class CarouselPage extends Component {
 
 
   render() {
+
     const displayPolls = this.state.polls.map((item) => {
-      console.log(item);
-          return (
-            <div>
-            {item.chartType == 'pie' ? <Pie question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3} name4={item.choice4}/> : <Bar question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3}/>}
-            </div>
-          )
-        })
+      if (item.category === this.props.insideCategory && item.chartType === 'bar') {
+        console.log(item, 'mirza');
+        return (
+          <div>
+            <Bar question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3}/>
+          </div>
+        )
+      } else if (item.category === this.props.insideCategory && item.chartType === 'pie') {
+        return (
+          <div>
+            <Pie question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3} name4={item.choice4}/>
+          </div>
+        )
+      }
+    })
+
           return (
           <div >
           <Carousel className='carousel'>
-          {displayPolls}
+            {displayPolls}
           </Carousel>
           </div>
           );

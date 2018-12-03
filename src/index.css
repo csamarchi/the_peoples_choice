@@ -35,7 +35,7 @@ input {
 
 .navBar {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   background-color: #dc9ee5;
   opacity: 0.9;
   height: 50px;

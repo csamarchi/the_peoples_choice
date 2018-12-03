@@ -1,8 +1,6 @@
-import {BarChart} from 'react-easy-chart';
 import React, {Component} from 'react';
 import Nav from '../Nav';
-import Bar from '../BarChart';
-import Carousel2 from '../Carousel2';
+import Carousel from '../Carousel';
 
 class Movies extends Component {
   constructor() {
@@ -10,10 +8,15 @@ class Movies extends Component {
   }
 
   render() {
+
+    const insideCategory = {
+      category: 'Movies'
+    }
+
     return(
       <div align="center">
         <Nav />
-        <Carousel2 />
+        <Carousel insideCategory={insideCategory.category}/>
       </div>
     )
   }

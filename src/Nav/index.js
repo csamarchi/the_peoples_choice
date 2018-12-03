@@ -11,11 +11,17 @@ class Nav extends Component {
   constructor() {
     super()
   }
+
+  handleClick = () => {
+    console.log('hey');
+
+  }
+
   render() {
     return(
       <nav className = "navBar">
         <ul>
-        <li><img className='cheers' src='cheers.png'/></li>
+        <li><img onClick={this.handleClick} className='cheers' src='cheers.png'/></li>
         <li><Link to='/category'>Vote</Link></li>
         <li><Link to ='/trending'>Top Trending</Link></li>
         <li><Link to ='/create'>Create a Post</Link></li>

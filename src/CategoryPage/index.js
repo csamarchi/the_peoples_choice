@@ -9,6 +9,7 @@ import Music from '../Music';
 class CategoryPage extends Component {
   constructor() {
     super();
+
   }
 
 
@@ -25,9 +26,10 @@ class CategoryPage extends Component {
               <h1 className='categoryButtonText'> Celebrities </h1>
             </div>
           </Link>
+
           <Link to ='/movies'>
             <div className="circle2">
-            <h1 className='categoryButtonText'> Sports <br/> & Movies </h1>
+            <h1 className='categoryButtonText'> Shows <br/> & Movies </h1>
             </div>
           </Link>
 
@@ -36,6 +38,7 @@ class CategoryPage extends Component {
             <h1 className='categoryButtonText'> Sports </h1>
             </div>
           </Link>
+          
           <Link to ='/music'>
             <div className="circle4">
               <h1 className='categoryButtonText'> Music </h1>

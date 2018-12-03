@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {PieChart} from 'react-easy-chart';
 import Nav from '../Nav';
+import Carousel from '../Carousel';
 
 class Music extends Component {
   constructor() {
@@ -8,10 +8,15 @@ class Music extends Component {
   }
 
   render() {
+
+    const insideCategory = {
+      category: 'Music'
+    }
+
     return(
       <div>
         <Nav />
-      <h1> Music! </h1>
+        <Carousel insideCategory={insideCategory.category} />
       </div>
     )
   }

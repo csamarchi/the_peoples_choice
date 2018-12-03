@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {PieChart} from 'react-easy-chart';
 import Nav from '../Nav';
+import Carousel from '../Carousel';
 
 class Sports extends Component {
   constructor() {
@@ -8,11 +8,15 @@ class Sports extends Component {
   }
 
   render() {
+
+    const insideCategory = {
+      category: 'Sports'
+    }
+
     return(
       <div>
         <Nav />
-      <h1> Sports! </h1>
-
+        <Carousel insideCategory={insideCategory.category} />
       </div>
     )
   }
