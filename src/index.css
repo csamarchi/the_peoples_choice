@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   align-items: center;
 }
 
@@ -31,50 +31,7 @@ input {
 }
 
 
-/* NAV BAR */
 
-.navBar {
-  display: flex;
-  justify-content: space-around;
-  background-color: #dc9ee5;
-  opacity: 0.9;
-  height: 50px;
-}
-
-.navBar ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  transition: 0.2s ease-out;
-  transition: .3s ease-in;
-}
-
-.navBar ul a {
-  color: white;
-  font-size: 20px;
-  font-family: "Helvetica",Helvetica,Arial,sans-serif;
-  margin-right: 30px;
-  position: relative;
-  left: -410px;
-  float: left;
-  line-height: 15px;
-  text-decoration: none;
-  vertical-align: middle;
-}
-
-.navBar a:hover {
-    color: black;
-    text-decoration: none;
-  }
-
-.cheers {
-  height: 37px;
-  width: 37px;
-  position: relative;
-  left: -440px;
-  top: -12px;
-}
 
 /* PAGE SCROLLING  */
 /* .title {

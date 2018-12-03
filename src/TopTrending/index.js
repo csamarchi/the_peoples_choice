@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {PieChart} from 'react-easy-chart';
 import Nav from '../Nav';
 import CreatePost from '../CreatePost';
 import DisplayTrending from '../DisplayTrending';
+
 class TopTrending extends Component {
   constructor() {
     console.log('FIRST')

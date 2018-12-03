@@ -6,25 +6,23 @@ import Celebrity from '../Celebrity';
 import Movies from '../Movies';
 import Sports from '../Sports';
 import Music from '../Music';
+import './style.css';
 
 class Nav extends Component {
   constructor() {
     super()
   }
 
-  handleClick = () => {
-    console.log('hey');
 
-  }
 
   render() {
     return(
       <nav className = "navBar">
         <ul>
-        <li><img onClick={this.handleClick} className='cheers' src='cheers.png'/></li>
-        <li><Link to='/category'>Vote</Link></li>
-        <li><Link to ='/trending'>Top Trending</Link></li>
-        <li><Link to ='/create'>Create a Post</Link></li>
+        <img className='cheers' src='cheers.png'/>
+        <Link to='/category'>Vote</Link>
+        <Link to ='/trending'>Top Trending</Link>
+        <Link to ='/create'>Create a Post</Link>
         </ul>
       </nav>
     )

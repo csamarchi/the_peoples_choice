@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Pager} from "react-bootstrap";
-import ReactPageScroller from "react-page-scroller";
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import LandingPage from './LandingPage';

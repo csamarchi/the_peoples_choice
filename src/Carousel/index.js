@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Carousel from 'nuka-carousel';
-import {PieChart} from 'react-easy-chart';
 import Pie from '../PieChart';
 import Bar from '../BarChart';
 
