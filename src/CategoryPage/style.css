@@ -1,0 +1,97 @@
+/* CATEGORY PAGE */
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+}
+
+.circle a, .circle2 a, .circle3 a, .circle4 a {
+  position: relative;
+  top: 115px;
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 10px;
+}
+
+.circle {
+ text-align: center;
+ margin: 10px;
+ height: 250px;
+ width: 250px;
+ background-color: #dd5fef;
+ border-radius: 50%;
+ display: inline-block;
+ /* transition: all 0.3s ease-in-out; */
+}
+
+.circle2 {
+ text-align: center;
+ margin: 10px;
+ height: 250px;
+ width: 250px;
+ background-color: #e58cf2;
+ border-radius: 50%;
+ display: inline-block;
+}
+
+.circle3 {
+ text-align: center;
+ margin: 10px;
+ height: 250px;
+ width: 250px;
+ background-color: #eea8f7;
+ border-radius: 50%;
+ display: inline-block;
+}
+
+.circle4 {
+ text-align: center;
+ margin: 10px;
+ height: 250px;
+ width: 250px;
+ background-color: #efbbf7;
+ border-radius: 50%;
+ display: inline-block;
+}
+
+.circle:hover, .circle3:hover, .circle4:hover, .circle2:hover {
+  opacity: 0.3;
+  background-size: cover;
+  background-repeat: none;
+ /* background-color: #4d94ff; */
+ /* opacity: 0.7; */
+ letter-spacing: 1px;
+ -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+ -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+ box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+ transition: all 0.4s ease 0s;
+}
+
+.circle:hover {
+  background-image: url('/kendall.jpg');
+}
+.circle3:hover {
+  background-image: url('/football.jpg');
+}
+
+.circle4:hover {
+  background-image: url('/timberlake.jpg');
+}
+
+.circle2:hover {
+  background-image: url('/netflix.jpg');
+}
+
+.categoryButtonText {
+  font-family: "Helvetica";
+  margin-top: 95px;
+  color: white;
+}
+
+.background {
+  background-color: #dedfe0;
+  z-index:-1;
+  height: 700px;
+}

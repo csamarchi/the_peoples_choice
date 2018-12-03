@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Nav from '../Nav';
+import './style.css';
 
 class CreatePost extends Component {
   constructor() {
@@ -68,12 +69,12 @@ class CreatePost extends Component {
         <form onSubmit={this.handleCreatePost} >
           <label>
             Question
-            <input type='text' name='question' onChange={this.handleChange} value={this.state.value} />
-          </label> <br/><br/>
+            <input className='questionBox' type='text' name='question' placeholder='Type here...' onChange={this.handleChange} value={this.state.value} />
+          </label> <br/><br/><br/>
           <label>
             Choice 1
             <input type='text' name='choice1' onChange={this.handleChange} value={this.state.value} />
-          </label> <br/><br/>
+          </label>
           <label>
             Choice 2
             <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
@@ -81,7 +82,7 @@ class CreatePost extends Component {
           <label>
             Choice 3
             <input type='text' name='choice3' onChange={this.handleChange} value={this.state.value} />
-          </label> <br/><br/>
+          </label>
           <label>
             Choice 4
             <input type='text' name='choice4' onChange={this.handleChange} value={this.state.value} />
@@ -89,10 +90,10 @@ class CreatePost extends Component {
           <label>
             Category
             <br/><br/>
-            <input type='radio' name='category' onChange={this.handleChange} value='Celebrity' /> Celebrity
-            <input type='radio' name='category' onChange={this.handleChange} value='Movies' /> Movies
-            <input type='radio' name='category' onChange={this.handleChange} value='Sports'/> Sports
-            <input type='radio' name='category' onChange={this.handleChange} value='Music' /> Music
+            <input className='radio' type='radio' name='category' onChange={this.handleChange} value='Music' /> Music
+            <input className='radio' type='radio' name='category' onChange={this.handleChange} value='Celebrity' /> Celebrity<br/><br/>
+            <input className='radio' type='radio' name='category' onChange={this.handleChange} value='Sports'/> Sports
+            <input className='radio' type='radio' name='category' onChange={this.handleChange} value='Movies' /> Shows / Movies
           </label> <br/><br/>
             <button className='createButton' type='submit'>Submit</button>
         </form>
@@ -104,12 +105,12 @@ class CreatePost extends Component {
         <form onSubmit={this.handleCreatePost} >
           <label>
             Question
-            <input type='text' name='question' onChange={this.handleChange} value={this.state.value} />
-          </label> <br/><br/>
+            <input className='questionBox' type='text' name='question' placeholder='Type here...' onChange={this.handleChange} value={this.state.value} />
+          </label> <br/><br/><br/>
           <label>
             Choice 1
             <input type='text' name='choice1' onChange={this.handleChange} value={this.state.value} />
-          </label> <br/><br/>
+          </label>
           <label>
             Choice 2
             <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
@@ -117,10 +118,10 @@ class CreatePost extends Component {
           <label>
             Category
             <br/><br/>
-            <input type='radio' name='category' onChange={this.handleChange} value='Celebrity' /> Celebrity
-            <input type='radio' name='category' onChange={this.handleChange} value='Movies' /> Movies
-            <input type='radio' name='category' onChange={this.handleChange} value='Sports'/> Sports
-            <input type='radio' name='category' onChange={this.handleChange} value='Music' /> Music
+            <input className='radio' type='radio' name='category' onChange={this.handleChange} value='Music' /> Music
+            <input className='radio' type='radio' name='category' onChange={this.handleChange} value='Celebrity' /> Celebrity<br/><br/>
+            <input className='radio' type='radio' name='category' onChange={this.handleChange} value='Sports'/> Sports
+            <input className='radio' type='radio' name='category' onChange={this.handleChange} value='Movies' /> Shows / Movies
           </label> <br/><br/>
             <button className='createButton' type='submit'>Submit</button>
         </form>
@@ -128,13 +129,13 @@ class CreatePost extends Component {
     }
 
     return(
-      <div>
+      <div className='background'>
         <Nav />
           <h1 className='createText'> Create your own post </h1>
             <div className='wrapperForm'>
-              {this.state.buttons ? <button onClick={this.handleClickBar}>Bar chart</button> : null}
+              {this.state.buttons ? <button className='barButton' onClick={this.handleClickBar} /> : null}
               {this.state.barChart ? barChart() : null}
-              {this.state.buttons ? <button onClick={this.handleClickPie}>Pie chart</button> : null}
+              {this.state.buttons ? <button className='pieButton' onClick={this.handleClickPie} /> : null}
               {this.state.pieChart ? pieChart() : null}
             </div>
       </div>

@@ -1,0 +1,52 @@
+/* CREATE POST */
+
+ .wrapperForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+input {
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.pieButton {
+  background-image: url("/pie_chart.png");
+  height: 277px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.barButton {
+  background-image: url("/bar_chart.png");
+  height: 277px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.radio {
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   border-radius: 100%;
+}
+
+.radio: hover {
+  color: blue;
+}
+
+.questionBox {
+  width: 328px;
+}
+
+.background {
+  background-color: #dedfe0;
+  z-index:-1;
+  height: 700px;
+}
