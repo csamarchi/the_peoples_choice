@@ -1,5 +1,19 @@
 /* TOP TRENDING */
 
-.gridContainer {
+.wrapper {
   display: grid;
+}
+
+.chartList {
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.chartDiv {
+  padding-left: 50px;
+  border: 1px solid;
+  margin: 5px;
+  background-color: #93b6e2;
 }

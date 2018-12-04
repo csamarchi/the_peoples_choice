@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
-import { Header, Card, Button, Image, Icon, Content, Grid } from 'semantic-ui-react';
+import { Card, Image, Button, Icon, Label, Grid } from 'semantic-ui-react'
 import Nav from '../Nav';
 import CreatePost from '../CreatePost';
 import Pie from '../PieChart';
@@ -8,10 +8,6 @@ import Bar from '../BarChart';
 import './style.css';
 import PieChart from 'react-minimal-pie-chart';
 
-// handleClick = () => {
-//   e.preventDefault();
-//   <Link to ='/show' />
-// }
 
 class DisplayTrending extends Component {
   constructor(){
@@ -19,7 +15,6 @@ class DisplayTrending extends Component {
   }
 
   handleViewClick = (e) => {
-
     console.log('HELLO',e.currentTarget)
   }
 
@@ -27,21 +22,18 @@ class DisplayTrending extends Component {
     render() {
       const displayTrending = this.props.trending.map((item, i) => {
           return (
-
-            <Grid columns={3} divided key={item._id}>
-              <Grid.Row>
+              <div key={item._id} className='chartDiv'>
                 <h3>{item.question}</h3>
                   <Image src='pie_chart.png' />
                   <button props={item.question} onClick={this.handleViewClick}>View</button>
-              </Grid.Row>
-            </Grid>
+              </div>
           )
         })
       return(
         <div>
-          <Card.Group>
+          <div className='chartList' >
             {displayTrending}
-          </Card.Group>
+          </div>
         </div>
       )
     }

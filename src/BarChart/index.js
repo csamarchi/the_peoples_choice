@@ -6,8 +6,8 @@ class Bar extends Component {
   constructor() {
     super();
     this.state = {
-      valueA: 50,
-      valueB: 0,
+      valueA: 1,
+      valueB: 1,
     }
   }
 
@@ -28,7 +28,7 @@ class Bar extends Component {
 
 
   render() {
-    console.log(this.state);
+
           return (
           <div>
             <h1> {this.props.question} </h1>

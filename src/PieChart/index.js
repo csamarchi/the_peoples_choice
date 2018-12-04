@@ -6,10 +6,10 @@ class Pie extends Component {
   constructor() {
     super();
     this.state = {
-      valueA: 25,
-      valueB: 25,
-      valueC: 25,
-      valueD: 25,
+      valueA: 1,
+      valueB: 1,
+      valueC: 1,
+      valueD: 1,
     }
   }
 
