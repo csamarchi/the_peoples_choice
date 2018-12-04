@@ -33,9 +33,9 @@ class Bar extends Component {
           <div>
             <h1> {this.props.question} </h1>
             <BarChart ylabel='Quantity'
-                              width={550}
-                              height={350}
-                              margin={{top: 20, right: 20, bottom: 100, left: 150}}
+                              width={600}
+                              height={400}
+                              margin={{top: 40, right: 20, bottom: 100, left: 200}}
                               data={[
               {text: this.props.name1, value: this.state.valueA},
               {text: this.props.name2, value: this.state.valueB},

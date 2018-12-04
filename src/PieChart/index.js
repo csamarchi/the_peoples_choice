@@ -44,22 +44,26 @@ class Pie extends Component {
           return (
           <div>
             <h1> {this.props.question} </h1>
+            <br/>
             <PieChart
               data={[
-                { title: 'One', value: this.state.valueA, color: '#E38627' },
-                { title: 'Two', value: this.state.valueB, color: '#C13C37' },
-                { title: 'Three', value: this.state.valueC, color: '#4286f4' },
-                { title: 'Four', value: this.state.valueD, color: '#cd30e5' },
+                { title: 'One', value: this.state.valueA, color: '#b53d45' },
+                { title: 'Two', value: this.state.valueB, color: '#ffd472' },
+                { title: 'Three', value: this.state.valueC, color: '#9a74ed' },
+                { title: 'Four', value: this.state.valueD, color: '#1ea0cc' },
 
               ]}
-              style={{height: '300px',
-                      left: '100px'
+              style={{height: '280px',
+
+
               }}
-            />;
-                  <button className='barButtons' onClick={this.handleClickA}>{this.props.name1}</button>
-                  <button className='barButtons' onClick={this.handleClickB}>{this.props.name2}</button>
-                  <button className='barButtons' onClick={this.handleClickC}>{this.props.name3}</button>
-                  <button className='barButtons' onClick={this.handleClickD}>{this.props.name4}</button>
+            />
+                <div className='buttonContainer'>
+                  <button className='pieButtons' onClick={this.handleClickA}>{this.props.name1}</button><br/><br/>
+                  <button className='pieButtons' onClick={this.handleClickB}>{this.props.name2}</button><br/><br/>
+                  <button className='pieButtons' onClick={this.handleClickC}>{this.props.name3}</button><br/><br/>
+                  <button className='pieButtons' onClick={this.handleClickD}>{this.props.name4}</button>
+                </div>
             </div>
           );
         }
