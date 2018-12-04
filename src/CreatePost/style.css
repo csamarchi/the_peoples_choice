@@ -20,6 +20,7 @@ input {
   width: 300px;
   background-repeat: no-repeat;
   background-size: 100%;
+  border: 1px solid;
 }
 
 .barButton {
@@ -28,6 +29,7 @@ input {
   width: 300px;
   background-repeat: no-repeat;
   background-size: 100%;
+  border: 1px solid;
 }
 
 .radio {
@@ -44,10 +46,4 @@ input {
 
 .questionBox {
   width: 328px;
-}
-
-.background {
-  background-color: #dedfe0;
-  z-index:-1;
-  height: 700px;
 }

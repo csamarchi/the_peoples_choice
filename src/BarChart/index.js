@@ -6,8 +6,8 @@ class Bar extends Component {
   constructor() {
     super();
     this.state = {
-      valueA: 1,
-      valueB: 1,
+      valueA: 0,
+      valueB: 0,
     }
   }
 

@@ -34,7 +34,7 @@ class App extends Component {
             <Route exact path="/music" component={Music} />
             <Route exact path="/create" component={CreatePost} />
             <Route exact path="/trending" component={TopTrending} />
-            <Route path="/trending/:id" component={ShowPage} />
+            <Route path="/:id" component={ShowPage} />
           </Switch>
       </div>
     )

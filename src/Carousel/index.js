@@ -37,15 +37,11 @@ class CarouselPage extends Component {
     
       if (item.category === this.props.insideCategory && item.chartType === 'bar') {
         return (
-
           <Bar key={item._id} question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3}/>
-
         )
       } else if (item.category === this.props.insideCategory && item.chartType === 'pie') {
         return (
-
             <Pie key={item._id} question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3} name4={item.choice4}/>
-
         )
       }
     })

@@ -14,24 +14,41 @@ class DisplayTrending extends Component {
     super();
   }
 
-  handleViewClick = (e) => {
+  handleViewClick = (props, e) => {
     console.log('HELLO',e.currentTarget)
+
   }
 
 
     render() {
+
       const displayTrending = this.props.trending.map((item, i) => {
+        if (item.chartType === 'pie') {
           return (
-              <div key={item._id} className='chartDiv'>
-                <h3>{item.question}</h3>
-                  <Image src='pie_chart.png' />
-                  <button props={item.question} onClick={this.handleViewClick}>View</button>
-              </div>
+            <div key={item._id} className='chartDiv'>
+              <h3>{item.question}</h3>
+                <Image src='pie_chart.png' />
+                <Route render={({ history}) => (
+                  <button onClick={() => { history.push('/'+ item._id) }}
+    >View</button>)} />
+            </div>
           )
-        })
+        } else {
+          return (
+            <div key={item._id} className='chartDiv'>
+              <h3>{item.question}</h3>
+              <Image src='bar_chart.png' />
+              <Route render={({ history}) => (
+                <button onClick={() => { history.push('/'+ item._id) }}
+  >View</button>)} />
+           </div>
+          )
+        }
+      })
+
       return(
         <div>
-          <div className='chartList' >
+          <div className='chartList'>
             {displayTrending}
           </div>
         </div>

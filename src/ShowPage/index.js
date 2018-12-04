@@ -6,15 +6,15 @@ import Pie from '../PieChart';
 import Bar from '../BarChart';
 
 class ShowPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       chart: []
     }
   }
 
   getChart = async () => {
-    const chart = await fetch('http://localhost:9000/pie/_id');
+    const chart = await fetch('http://localhost:9000/pie' + this.props.match.url );
     const chartParsedJSON = await chart.json();
       return chartParsedJSON
   }
@@ -22,6 +22,7 @@ class ShowPage extends Component {
   componentDidMount() {
     this.getChart().then((chart) => {
       this.setState({chart: chart.data})
+      console.log(this.state.chart, 'MIRZA')
     }).catch((err) => {
       console.log(err);
     })
@@ -29,12 +30,24 @@ class ShowPage extends Component {
 
 
   render() {
+    const showChart = () => {
+      if (this.state.chart.chartType === 'bar') {
+        return (
+          <Bar key={this.state.chart._id} question={this.state.chart.question} name1={this.state.chart.choice1} name2={this.state.chart.choice2} name3={this.state.chart.choice3}/>
+        )
+      } else if (this.state.chart.chartType  === 'pie') {
+        return (
+            <Pie key={this.state.chart._id} question={this.state.chart.question} name1={this.state.chart.choice1} name2={this.state.chart.choice2} name3={this.state.chart.choice3} name4={this.state.chart.choice4}/>
+        )
+      }
+    }
+
 
     console.log(this.props.match);
     return(
       <div>
         <Nav />
-
+        {showChart()}
       </div>
     )
   }
