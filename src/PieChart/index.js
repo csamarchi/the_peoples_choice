@@ -6,10 +6,10 @@ class Pie extends Component {
   constructor() {
     super();
     this.state = {
-      valueA: 0,
-      valueB: 0,
-      valueC: 0,
-      valueD: 0,
+      valueA: 25,
+      valueB: 25,
+      valueC: 25,
+      valueD: 25,
     }
   }
 
@@ -51,13 +51,11 @@ class Pie extends Component {
                 { title: 'Two', value: this.state.valueB, color: '#ffd472' },
                 { title: 'Three', value: this.state.valueC, color: '#9a74ed' },
                 { title: 'Four', value: this.state.valueD, color: '#1ea0cc' },
-
               ]}
               style={{height: '280px',
-
-
               }}
             />
+
                 <div className='buttonContainer'>
                   <button className='pieButtons' onClick={this.handleClickA}>{this.props.name1}</button><br/><br/>
                   <button className='pieButtons' onClick={this.handleClickB}>{this.props.name2}</button><br/><br/>

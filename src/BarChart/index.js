@@ -6,7 +6,7 @@ class Bar extends Component {
   constructor() {
     super();
     this.state = {
-      valueA: 0,
+      valueA: 50,
       valueB: 0,
     }
   }
@@ -28,12 +28,12 @@ class Bar extends Component {
 
 
   render() {
-
+    console.log(this.state);
           return (
           <div>
             <h1> {this.props.question} </h1>
             <BarChart ylabel='Quantity'
-                              width={600}
+                              width={500}
                               height={400}
                               margin={{top: 40, right: 20, bottom: 100, left: 200}}
                               data={[

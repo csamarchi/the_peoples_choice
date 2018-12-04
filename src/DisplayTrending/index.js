@@ -27,15 +27,14 @@ class DisplayTrending extends Component {
     render() {
       const displayTrending = this.props.trending.map((item, i) => {
           return (
-            <Card key={item._id}>
-              <Card.Content >
-                <Card.Header>{item.question}</Card.Header>
+
+            <Grid columns={3} divided key={item._id}>
+              <Grid.Row>
+                <h3>{item.question}</h3>
                   <Image src='pie_chart.png' />
-              </Card.Content>
-              <Card.Content extra>
                   <button props={item.question} onClick={this.handleViewClick}>View</button>
-              </Card.Content>
-            </Card>
+              </Grid.Row>
+            </Grid>
           )
         })
       return(
