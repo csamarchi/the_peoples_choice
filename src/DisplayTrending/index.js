@@ -1,34 +1,51 @@
 import React, {Component} from 'react';
+import { Route, Link, Switch } from 'react-router-dom';
+import { Header, Card, Button, Image, Icon, Content, Grid } from 'semantic-ui-react';
 import Nav from '../Nav';
 import CreatePost from '../CreatePost';
 import Pie from '../PieChart';
 import Bar from '../BarChart';
-import { Card, Image, Button, Icon, Label, Grid } from 'semantic-ui-react'
 import './style.css';
+import PieChart from 'react-minimal-pie-chart';
 
-const DisplayTrending = (props) => {
-  console.log('christine', props)
-    const displayTrending = props.trending.map((item) => {
-        return (
-          <div className='gridContainer'>
-            <div className='trendingContainer'>
-              <h3>{item.question}</h3>
-              <h3>{item.choice1}</h3>
-              <h3>{item.choice2}</h3>
-              <h3>{item.category}</h3>
-              <h3>{item.chartType}</h3>
-            </div>
-          </div>
-        )
-      })
+// handleClick = () => {
+//   e.preventDefault();
+//   <Link to ='/show' />
+// }
 
-    return(
-      <div>
-        <Card.Group>
-        {displayTrending}
-        </Card.Group>
-      </div>
-    )
+class DisplayTrending extends Component {
+  constructor(){
+    super();
+  }
+
+  handleViewClick = (e) => {
+
+    console.log('HELLO',e.currentTarget)
+  }
+
+
+    render() {
+      const displayTrending = this.props.trending.map((item, i) => {
+          return (
+            <Card key={item._id}>
+              <Card.Content >
+                <Card.Header>{item.question}</Card.Header>
+                  <Image src='pie_chart.png' />
+              </Card.Content>
+              <Card.Content extra>
+                  <button props={item.question} onClick={this.handleViewClick}>View</button>
+              </Card.Content>
+            </Card>
+          )
+        })
+      return(
+        <div>
+          <Card.Group>
+            {displayTrending}
+          </Card.Group>
+        </div>
+      )
+    }
   }
 
 

@@ -17,10 +17,11 @@ class LandingPage extends Component {
 
     return(
       <div className='background'>
-      <Nav />
-      <h1 className='headers' > Welcome!</h1>
-        <container className='welcome'>
-        </container>
+        <Nav />
+        <h1 className='headers' > Welcome!</h1>
+          <container className='welcome'>
+            <img src='cheers.png' />
+          </container>
       </div>
     )
   }

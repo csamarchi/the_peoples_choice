@@ -25,6 +25,9 @@ class CarouselPage extends Component {
     }).catch((err) => {
       console.log(err);
     })
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 0);
   }
 
 
@@ -33,13 +36,13 @@ class CarouselPage extends Component {
     const displayPolls = this.state.polls.map((item) => {
       if (item.category === this.props.insideCategory && item.chartType === 'bar') {
         return (
-          <div>
+          <div key={item._id}>
             <Bar question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3}/>
           </div>
         )
       } else if (item.category === this.props.insideCategory && item.chartType === 'pie') {
         return (
-          <div>
+          <div key={item._id}>
             <Pie question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3} name4={item.choice4}/>
           </div>
         )

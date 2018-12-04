@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
 import Nav from '../Nav';
+import { Header, Card, Button, Image, Icon, Content, Grid } from 'semantic-ui-react';
 import CreatePost from '../CreatePost';
-import DisplayTrending from '../DisplayTrending';
+import Pie from '../PieChart';
+import Bar from '../BarChart';
 
-class TopTrending extends Component {
+class ShowPage extends Component {
   constructor() {
     super();
     this.state = {
-      trending: [],
+      chart: []
     }
   }
 
   getChart = async () => {
-    const chart = await fetch('http://localhost:9000/pie');
+    const chart = await fetch('http://localhost:9000/pie/_id');
     const chartParsedJSON = await chart.json();
       return chartParsedJSON
   }
@@ -27,15 +29,15 @@ class TopTrending extends Component {
 
 
   render() {
-    console.log(this.state.chart)
+
+    console.log(this.props.match);
     return(
       <div>
         <Nav />
-        <h1> Trending Now</h1>
-        {this.state.chart ? <DisplayTrending trending={this.state.chart}/> : null}
+
       </div>
     )
   }
 }
 
-export default TopTrending;
+export default ShowPage;

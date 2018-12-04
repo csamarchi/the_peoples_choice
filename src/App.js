@@ -11,6 +11,7 @@ import Music from './Music';
 import Nav from './Nav';
 import CreatePost from './CreatePost';
 import TopTrending from './TopTrending';
+import ShowPage from './ShowPage';
 
 class App extends Component {
   constructor() {
@@ -33,6 +34,7 @@ class App extends Component {
             <Route exact path="/music" component={Music} />
             <Route exact path="/create" component={CreatePost} />
             <Route exact path="/trending" component={TopTrending} />
+            <Route path="/trending/:id" component={ShowPage} />
           </Switch>
       </div>
     )
