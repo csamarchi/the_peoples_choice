@@ -1,0 +1,9 @@
+#app {
+  padding: 20px;
+}
+.comment-form {
+  width: 500px;
+}
+.comment-form .input-group {
+  margin: 10px 0;
+}

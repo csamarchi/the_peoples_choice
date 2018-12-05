@@ -5,6 +5,7 @@ import CreatePost from '../CreatePost';
 import Pie from '../PieChart';
 import Bar from '../BarChart';
 import './style.css';
+import CommentBox from '../CommentBox';
 
 class ShowPage extends Component {
   constructor(props) {

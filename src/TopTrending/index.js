@@ -13,6 +13,7 @@ class TopTrending extends Component {
 
   getChart = async () => {
     const chart = await fetch('http://localhost:9000/pie');
+    console.log(chart, 'MKMK');
     const chartParsedJSON = await chart.json();
       return chartParsedJSON
   }

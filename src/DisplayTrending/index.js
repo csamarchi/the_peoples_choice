@@ -14,8 +14,8 @@ class DisplayTrending extends Component {
     super();
   }
 
-  handleViewClick = (props, e) => {
-    console.log('HELLO',e.currentTarget)
+  handleViewClick = (e, id) => {
+    console.log('HELLO',id)
 
   }
 
@@ -29,7 +29,7 @@ class DisplayTrending extends Component {
               <h3>{item.question}</h3>
                 <Image src='pie_chart.png' />
                 <Route render={({ history}) => (
-                  <button onClick={() => { history.push('/'+ item._id) }}
+                  <button id={item._id} onClick={() => { history.push('/'+ item._id) }}
     >View</button>)} />
             </div>
           )

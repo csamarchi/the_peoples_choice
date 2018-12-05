@@ -41,11 +41,18 @@ class Bar extends Component {
   }
 
 
-  handleClickA = (e, prop) => {
+  handleClickA = async (e, prop) => {
     e.preventDefault();
+    console.log(prop, '------------');
     this.setState((prevState) => ({
       valueA: prevState.valueA + 1
     }))
+
+    const handleA = await fetch('http://localhost:9000/pie', {
+      method: 'POST',
+
+    })
+
 
     let choice = Object.assign({}, this.state[e.currentTarget.name])
     choice.vote = this.props.vote1 + 1
