@@ -4,6 +4,7 @@ import { Header, Card, Button, Image, Icon, Content, Grid } from 'semantic-ui-re
 import CreatePost from '../CreatePost';
 import Pie from '../PieChart';
 import Bar from '../BarChart';
+import './style.css';
 
 class ShowPage extends Component {
   constructor(props) {
@@ -45,7 +46,7 @@ class ShowPage extends Component {
 
     console.log(this.props.match);
     return(
-      <div>
+      <div className='background'>
         <Nav />
         {showChart()}
       </div>

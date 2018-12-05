@@ -69,7 +69,7 @@ code {
 } */
 
 /* HEADERS */
-.headers, h1, h3 {
+.headers, h1, h3, h2 {
     font-family: "Helvetica";
     font-weight: lighter;
     text-align: center;
@@ -81,15 +81,6 @@ code {
 
 /* PIE & BAR CHART */
 
-.chartButtons {
-  margin: 10px;
-  padding: 10px;
-  position: relative;
-  bottom: 100px;
-  font-family: "Verdana";
-  border-radius: 10px;
-  z-index: 2;
-}
 
 button {
   margin: 10px;
@@ -106,30 +97,10 @@ button:hover {
   cursor: pointer;
 }
 
-.pieButtons {
-  position: relative;
-  top: -250px;
-  margin: 10px;
-  padding: 20px;
-  font-family: "Verdana";
-  border-radius: 10px;
-}
-
-.buttonContainer {
-  float: right;
-  position: relative;
-  left: -100px;
-}
-
 .background {
   background-color: #dedfe0;
   z-index:-1;
-  height: 700px;
+  height: 730px;
 }
 
 /* BAR CHART */
-
-.bar {
-  margin-left: 10px;
-  fill: #b53d45;
-}

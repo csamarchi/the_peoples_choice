@@ -16,9 +16,10 @@ class LandingPage extends Component {
   render() {
 
     return(
-      <div className='background'>
+      <div className='background2'>
         <Nav />
-        <h1 className='headers' > Welcome!</h1>
+        <h1 className='headers2' > Good Morning Millenials!</h1>
+        <h2> And welcome to the Peoples Choice</h2>
           <container className='welcome'>
             <img src='cheers.png' />
           </container>

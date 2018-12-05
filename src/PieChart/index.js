@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import Carousel from 'nuka-carousel';
 import PieChart from 'react-minimal-pie-chart';
+import './style.css';
 
 class Pie extends Component {
   constructor() {
     super();
     this.state = {
-      valueA: 0,
-      valueB: 0,
-      valueC: 0,
+      valueA: 1,
+      valueB: 1,
+      valueC: 1,
       valueD: 1,
     }
   }
@@ -40,7 +41,9 @@ class Pie extends Component {
   }
 
   render() {
-
+    const buttonColor = {
+      color: '#ffd472',
+    }
           return (
           <div>
             <h1> {this.props.question} </h1>
@@ -57,10 +60,10 @@ class Pie extends Component {
             />
 
                 <div className='buttonContainer'>
-                  <button className='pieButtons' onClick={this.handleClickA}>{this.props.name1}</button><br/><br/>
-                  <button className='pieButtons' onClick={this.handleClickB}>{this.props.name2}</button><br/><br/>
-                  <button className='pieButtons' onClick={this.handleClickC}>{this.props.name3}</button><br/><br/>
-                  <button className='pieButtons' onClick={this.handleClickD}>{this.props.name4}</button>
+                  <button className='choice1Buttons' onClick={this.handleClickA}>{this.props.name1}</button><br/><br/>
+                  <button className='choice2Buttons' onClick={this.handleClickB}>{this.props.name2}</button><br/><br/>
+                  <button className='choice3Buttons' onClick={this.handleClickC}>{this.props.name3}</button><br/><br/>
+                  <button className='choice4Buttons' onClick={this.handleClickD}>{this.props.name4}</button>
                 </div>
             </div>
           );

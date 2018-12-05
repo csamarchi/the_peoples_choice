@@ -37,11 +37,11 @@ class CarouselPage extends Component {
 
       if (item.category === this.props.insideCategory && item.chartType === 'bar') {
         return (
-          <Bar key={item._id} question={item.question} name1={item.choice1.name} name2={item.choice2.name}/>
+          <Bar key={item._id} vote1={item.choice1.votes} vote2={item.choice2.votes} question={item.question} name1={item.choice1.name} name2={item.choice2.name}/>
         )
       } else if (item.category === this.props.insideCategory && item.chartType === 'pie') {
         return (
-            <Pie key={item._id} question={item.question} name1={item.choice1.name} name2={item.choice2.name} name3={item.choice3.name} name4={item.choice4.name}/>
+            <Pie key={item._id} vote1={item.choice1.votes} vote2={item.choice2.votes} vote3={item.choice3.votes} vote4={item.choice4.votes} question={item.question} name1={item.choice1.name} name2={item.choice2.name} name3={item.choice3.name} name4={item.choice4.name}/>
         )
       }
     })

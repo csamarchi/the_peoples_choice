@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Nav from '../Nav';
 import './style.css';
+import { Route, Link, Switch } from 'react-router-dom';
 
 class CreatePost extends Component {
   constructor() {
@@ -10,19 +11,19 @@ class CreatePost extends Component {
       question: '',
       choice1: {
         name: '',
-        vote: 0
+        votes: 0
       },
       choice2: {
         name: '',
-        vote: 0
+        votes: 0
       },
       choice3: {
         name: '',
-        vote: 0
+        votes: 0
       },
       choice4: {
         name: '',
-        vote: 0
+        votes: 0
       },
       category: '',
       pieChart: false,
@@ -39,6 +40,7 @@ class CreatePost extends Component {
     let choice = Object.assign({}, this.state[e.currentTarget.name])
     choice.name = e.currentTarget.value
     this.setState({[e.currentTarget.name]: choice});
+    console.log(choice);
   }
 
 
@@ -119,7 +121,7 @@ class CreatePost extends Component {
       )
     }
 
-    const barChart = () => {
+    const barChart = (item) => {
       return (
         <form onSubmit={this.handleCreatePost} >
           <label>
@@ -142,7 +144,7 @@ class CreatePost extends Component {
             <input className='radio' type='radio' name='category' onChange={this.handleChange} value='Sports'/> Sports
             <input className='radio' type='radio' name='category' onChange={this.handleChange} value='Movies' /> Shows / Movies
           </label> <br/><br/>
-            <button className='createButton' type='submit'>Submit</button>
+              <button className='createButton' type='submit'>Submit</button>
         </form>
       )
     }

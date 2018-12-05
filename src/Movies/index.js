@@ -14,7 +14,7 @@ class Movies extends Component {
     }
 
     return(
-      <div align="center">
+      <div className='background' align="center">
         <Nav />
         <Carousel insideCategory={insideCategory.category}/>
       </div>

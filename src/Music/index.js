@@ -14,7 +14,7 @@ class Music extends Component {
     }
 
     return(
-      <div>
+      <div className='background'>
         <Nav />
         <Carousel insideCategory={insideCategory.category} />
       </div>
