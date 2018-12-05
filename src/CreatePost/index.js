@@ -8,10 +8,22 @@ class CreatePost extends Component {
     this.state = {
       chartType: '',
       question: '',
-      choice1: '',
-      choice2: '',
-      choice3: '',
-      choice4: '',
+      choice1: {
+        name: '',
+        vote: 0
+      },
+      choice2: {
+        name: '',
+        vote: 0
+      },
+      choice3: {
+        name: '',
+        vote: 0
+      },
+      choice4: {
+        name: '',
+        vote: 0
+      },
       category: '',
       pieChart: false,
       barChart: false,
@@ -22,6 +34,13 @@ class CreatePost extends Component {
   handleChange = (e) => {
     this.setState({[e.currentTarget.name]: e.currentTarget.value});
   }
+
+  handleChoiceChange = (e) => {
+    let choice = Object.assign({}, this.state[e.currentTarget.name])
+    choice.name = e.currentTarget.value
+    this.setState({[e.currentTarget.name]: choice});
+  }
+
 
   handleCreatePost = async (e) => {
     e.preventDefault();
@@ -73,19 +92,19 @@ class CreatePost extends Component {
           </label> <br/><br/><br/>
           <label>
             Choice 1
-            <input type='text' name='choice1' onChange={this.handleChange} value={this.state.value} />
+            <input type='text' name='choice1' onChange={this.handleChoiceChange} value={this.state.value} />
           </label>
           <label>
             Choice 2
-            <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
+            <input type='text' name='choice2' onChange={this.handleChoiceChange} value={this.state.value} />
           </label> <br/><br/>
           <label>
             Choice 3
-            <input type='text' name='choice3' onChange={this.handleChange} value={this.state.value} />
+            <input type='text' name='choice3' onChange={this.handleChoiceChange} value={this.state.value} />
           </label>
           <label>
             Choice 4
-            <input type='text' name='choice4' onChange={this.handleChange} value={this.state.value} />
+            <input type='text' name='choice4' onChange={this.handleChoiceChange} value={this.state.value} />
           </label> <br/><br/>
           <label>
             Category
@@ -109,11 +128,11 @@ class CreatePost extends Component {
           </label> <br/><br/><br/>
           <label>
             Choice 1
-            <input type='text' name='choice1' onChange={this.handleChange} value={this.state.value} />
+            <input type='text' name='choice1' onChange={this.handleChoiceChange} value={this.state.value} />
           </label>
           <label>
             Choice 2
-            <input type='text' name='choice2' onChange={this.handleChange} value={this.state.value} />
+            <input type='text' name='choice2' onChange={this.handleChoiceChange} value={this.state.value} />
           </label> <br/><br/>
           <label>
             Category
