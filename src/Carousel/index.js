@@ -34,14 +34,14 @@ class CarouselPage extends Component {
   render() {
 
     const displayPolls = this.state.polls.map((item) => {
-    
+
       if (item.category === this.props.insideCategory && item.chartType === 'bar') {
         return (
-          <Bar key={item._id} question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3}/>
+          <Bar key={item._id} question={item.question} name1={item.choice1.name} name2={item.choice2.name}/>
         )
       } else if (item.category === this.props.insideCategory && item.chartType === 'pie') {
         return (
-            <Pie key={item._id} question={item.question} name1={item.choice1} name2={item.choice2} name3={item.choice3} name4={item.choice4}/>
+            <Pie key={item._id} question={item.question} name1={item.choice1.name} name2={item.choice2.name} name3={item.choice3.name} name4={item.choice4.name}/>
         )
       }
     })

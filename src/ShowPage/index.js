@@ -33,11 +33,11 @@ class ShowPage extends Component {
     const showChart = () => {
       if (this.state.chart.chartType === 'bar') {
         return (
-          <Bar key={this.state.chart._id} question={this.state.chart.question} name1={this.state.chart.choice1} name2={this.state.chart.choice2} name3={this.state.chart.choice3}/>
+          <Bar key={this.state.chart._id} question={this.state.chart.question} name1={this.state.chart.choice1.name} name2={this.state.chart.choice2.name} />
         )
       } else if (this.state.chart.chartType  === 'pie') {
         return (
-            <Pie key={this.state.chart._id} question={this.state.chart.question} name1={this.state.chart.choice1} name2={this.state.chart.choice2} name3={this.state.chart.choice3} name4={this.state.chart.choice4}/>
+            <Pie key={this.state.chart._id} question={this.state.chart.question} name1={this.state.chart.choice1.name} name2={this.state.chart.choice2.name} name3={this.state.chart.choice3.name} name4={this.state.chart.choice4.name}/>
         )
       }
     }
