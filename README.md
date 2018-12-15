@@ -7,15 +7,15 @@
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Screenshots:
 
-![alt text](/public/carousel_shot.png "Logo Title Text 1")
+![alt text](/public/carousel_shot.png)
 
-![alt text](/public/category_page.png "Logo Title Text 1")
+![alt text](/public/category_page.png)
 
-![alt text](/public/create_page.png "Logo Title Text 1")
+![alt text](/public/create_page.png)
 
 # Wireframe:
 
-![alt text](/public/wireframe.png "Logo Title Text 1")
+![alt text](/public/wireframe.png)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
