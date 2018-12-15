@@ -1,4 +1,4 @@
-# The People's Choice New Branch Test
+# The People's Choice
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
