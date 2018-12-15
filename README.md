@@ -13,6 +13,8 @@
 
 ![alt text](/public/create_page.png)
 
+![alt text](/public/create.png)
+
 # Wireframe:
 
 ![alt text](/public/wireframe.png)
