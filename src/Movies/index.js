@@ -3,10 +3,7 @@ import Nav from '../Nav';
 import Carousel from '../Carousel';
 
 class Movies extends Component {
-  constructor() {
-    super();
-  }
-
+  
   render() {
 
     const insideCategory = {

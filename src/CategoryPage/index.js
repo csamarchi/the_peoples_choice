@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Nav from '../Nav';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Celebrity from '../Celebrity';
 import Movies from '../Movies';
 import Sports from '../Sports';

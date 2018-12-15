@@ -3,9 +3,6 @@ import Nav from '../Nav';
 import Carousel from '../Carousel';
 
 class Sports extends Component {
-  constructor() {
-    super();
-  }
 
   render() {
 

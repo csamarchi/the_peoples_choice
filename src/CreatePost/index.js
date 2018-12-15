@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Nav from '../Nav';
 import './style.css';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class CreatePost extends Component {
   constructor() {

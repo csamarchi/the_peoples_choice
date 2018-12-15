@@ -3,9 +3,6 @@ import Nav from '../Nav';
 import Carousel from '../Carousel';
 
 class Music extends Component {
-  constructor() {
-    super();
-  }
 
   render() {
 
